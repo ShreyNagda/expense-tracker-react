@@ -1,0 +1,171 @@
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.container {
+  margin: 30px auto;
+  width: calc(min(400px, 90vw));
+}
+.title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.balance-container {
+  padding: 20px;
+}
+
+.inc-exp-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000041;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.inc-exp-container > div {
+  width: 100%;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 2px solid #dedede;
+}
+
+.income {
+  color: rgba(0, 128, 0, 0.7);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.expense {
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.subtitle {
+  width: 100%;
+  border-bottom: 2px solid #dedede;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.transaction-list {
+  width: 100%;
+  padding-left: 0;
+  padding-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.transaction-item {
+  width: 100%;
+  background: #fff;
+  box-shadow: 1px 1px 3px #00000063;
+  padding: 10px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.red {
+  border-right: 4px solid red;
+}
+.green {
+  border-right: 4px solid green;
+}
+
+.add-new-transaction {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px #00000041;
+  border-radius: 3px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.error {
+  margin-top: 5px;
+  color: red;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 10px;
+  padding: 10px;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+@media screen and (max-width: 426px) {
+  .add-new-transaction .subtitle {
+    padding: 5px;
+  }
+  .input-container {
+    flex-direction: column;
+  }
+  .add-new-transaction > form {
+    flex-direction: column;
+    gap: 1px;
+  }
+  .form-control {
+    flex-direction: column;
+  }
+}
